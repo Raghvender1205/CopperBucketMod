@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "copperbucket",
+  "version": "${version}",
+
+  "name": "CopperBucket",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/copperbucket/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": ["org.rc.copperbucket.client.CopperbucketDataGenerator"],
+    "client": ["org.rc.copperbucket.client.CopperbucketClient"],
+    "main": ["org.rc.copperbucket.Copperbucket"]
+  },
+
+  "mixins": [
+    "copperbucket.mixins.json"
+    ,{
+      "config": "copperbucket.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
