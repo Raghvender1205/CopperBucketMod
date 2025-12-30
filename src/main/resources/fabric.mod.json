@@ -11,7 +11,7 @@
   "license": "All-Rights-Reserved",
   "icon": "assets/copperbucket/icon.png",
 
-  "environment": "client",
+  "environment": "*",
   "entrypoints": {
     "fabric-datagen": ["org.rc.copperbucket.client.CopperbucketDataGenerator"],
     "client": ["org.rc.copperbucket.client.CopperbucketClient"],
